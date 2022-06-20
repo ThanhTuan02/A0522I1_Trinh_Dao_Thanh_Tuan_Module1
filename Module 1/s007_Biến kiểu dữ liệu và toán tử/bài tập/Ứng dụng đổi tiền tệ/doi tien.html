@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+       <table border="0">
+           <tr>
+           <th>Amount</th>
+           <th>From Currency</th>
+           <th>To Currency</th>
+           </tr>
+           <tr>
+             <td>
+                 <input type="number" id="amount" value="23000">
+             </td>
+            <td>
+               <select id="from">
+                   <option id="vnd">VietNam</option>
+                   <option id="usd">America</option>
+               </select>
+           </td>
+           <td>
+               <select id="to">
+                   <option id="uk">USD</option>
+                   <option id="vn">VND</option>
+               </select>
+           </td>
+           <td>
+               <button type="button" onclick="Convert()" >Convert</button>
+           </td>
+           </tr>
+       </table>
+        <p><span id="kq"></span></p>
+    </form>
+    <script>
+        function Convert() {
+            let Amount = document.getElementById("amount").value;
+            let From = document.getElementById("from").value;
+            let To = document.getElementById("to").value;
+            let result;
+            if (From === "VietNam" && To === "USD") {
+                result = "Kết quả : " + (Amount/23000) + "USD";
+                document.getElementById("kq").innerHTML = result;
+
+            } else if (From === "America" && To === "VND") {
+                result = "kết quả : " + (Amount*23000) + "VND";
+                document.getElementById("kq").innerHTML = result;
+
+            } else {
+                result = "không hợp lệ";
+                document.getElementById("kq").innerHTML = result;
+            }
+
+        }
+
+    </script>
+</body>
+</html>
