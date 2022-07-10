@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money = +prompt("Nhap So tien da gui?")
+    let month = +prompt("Nhap so Thang gui?")
+    let result = 0;
+    let thue = 0;
+    if (month <= 6)  {
+        thue = 7;
+        result = money*thue/360 * 180;
+    } else if (money <= 8) {
+        thue = 10;
+        result = money*thue/360 * 240;
+    } else {
+        thue = 15;
+        result = money*thue/360 * 300;
+    }
+    alert(result)
+</script>
+</body>
+</html>

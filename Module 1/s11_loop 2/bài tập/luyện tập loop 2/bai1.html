@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let numbers = +prompt("")
+        let result;
+        let a = 0;
+        let b = 1;
+        while ( b < numbers) {
+            for (i = 0; i < numbers; i++) {
+                result = a + b;
+                a = b;
+                b = result;
+                document.writeln(result);
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      let a = parseInt(prompt("điểm bài kiểm tra"));
+      let b = parseInt(prompt("điểm thi giữa kỳ"));
+      let c = parseInt(prompt("điểm thi cuối kỳ"));
+      let tongket = (a + b + c) / 3;
+      if (tongket >= 80) {
+          alert("Loại giỏi")
+      } else if (tongket >= 65) {
+          alert("Loại khá")
+      } else if (tongket >= 50) {
+          alert("Loại trung bình")
+      } else if (tongket > 30) {
+          alert("Loại yếu")
+      } else {
+          alert("kém")
+      }
+    </script>
+</body>
+</html>
