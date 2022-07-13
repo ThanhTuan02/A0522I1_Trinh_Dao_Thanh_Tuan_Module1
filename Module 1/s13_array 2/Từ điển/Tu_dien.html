@@ -6,17 +6,19 @@
 </head>
 <body>
     <script>
-        let array = prompt("")
-        let arr1 = ["Xin chào"," Cảm ơn "," Tạm biệt "];
-        let arr2 = ["Hello"," Thanks "," Goodbye "];
-            if (arr1.indexOf(array !== -1)) {
-                    alert(arr2[arr1.indexOf(array)]);
+        let array = prompt("");
+        let arr1 = ["Xin chào","Cảm ơn","Tạm biệt"];
+        let arr2 = ["Hello","Thanks","Goodbye"];
+        for (let i = 0; i < array.length;i++) {
+            if (array === arr1[i]) {
+                alert(arr2[i]);
+            } else if (array === arr2[i]) {
+                alert(arr1[i]);
+            } else {
+                alert("");
+                break;
             }
-            else if (arr2.indexOf(array !== -1)) {
-                alert(arr1[arr2.indexOf(array)]);
-        }  else {
-                alert("Không tìm thấy");
-            }
+        }
     </script>
 </body>
 </html>

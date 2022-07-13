@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+      let numbers = [1,2,3,4,5,67,7,8,9,11];
+      let user = +prompt("");
+      for (let i =0; i < numbers.length;i++) {
+          if (user === numbers[i]) {
+              numbers.splice(i,1);
+              numbers.push(0);
+          }
+      }
+          document.write(numbers.join("-"));
+  </script>
+</body>
+</html>
