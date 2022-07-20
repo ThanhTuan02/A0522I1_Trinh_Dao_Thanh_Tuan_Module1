@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function giai_thua(n) {
+            let x = 1;
+            for (let i = 1; i <= n;i++) {
+                x *= i;
+            }
+            return x;
+        }
+        let n = +prompt("nhập giá trị vào đây")
+        let result = giai_thua(n);
+        alert(result);
+    </script>
+</body>
+</html>

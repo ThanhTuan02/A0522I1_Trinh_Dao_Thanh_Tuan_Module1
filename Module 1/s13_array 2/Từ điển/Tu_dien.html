@@ -6,18 +6,19 @@
 </head>
 <body>
     <script>
-        let array = prompt("");
-        let arr1 = ["Xin chào","Cảm ơn","Tạm biệt"];
-        let arr2 = ["Hello","Thanks","Goodbye"];
-        for (let i = 0; i < array.length;i++) {
-            if (array === arr1[i]) {
-                alert(arr2[i]);
-            } else if (array === arr2[i]) {
-                alert(arr1[i]);
-            } else {
-                alert("");
-                break;
-            }
+        let eng = ["hello", "good"];
+        let vn = ["xin chao", "tot"];
+
+        let input = prompt("input keyword:");
+        let index = eng.indexOf(input);
+        let index2= vn.indexOf(input);
+        if(index !== -1){
+            alert(vn[index]);
+        } else if (index2 !==-1) {
+            alert(eng[index2])
+        }
+        else {
+            alert("Not found!..")
         }
     </script>
 </body>

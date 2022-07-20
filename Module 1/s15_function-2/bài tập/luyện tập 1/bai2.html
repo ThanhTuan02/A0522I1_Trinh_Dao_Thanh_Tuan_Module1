@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    function so_dao_nguoc (n) {
+        n = n.toString();
+        return n.split("").reverse().join("");
+    }
+    function tim_so_dao_nguoc (n) {
+        let result = 0;
+        if (so_dao_nguoc(n) == n) {
+            result++;
+        }
+        return result;
+    }
+    let n = prompt("nhập số tự nhiên")
+    let check = tim_so_dao_nguoc(n);
+    if(check == 1) {
+        alert(n + " là số đối xứng");
+    }
+  </script>
+</body>
+</html>
