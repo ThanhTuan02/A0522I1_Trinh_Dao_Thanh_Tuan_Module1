@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a =[];
+        let n = +(prompt("nhập độ dài của mảng"));
+        let b = 0;
+        let c = 0;
+        if (n<=50) {
+            for (let i = 0; i < n; i++) {
+                let x = +(prompt('nhập số nguyên vào mảng'));
+
+                if (x % 2 !== 0 && i % 2 === 0) {
+                    b += x;
+                    c++;
+                }
+                a.push(x);
+            }
+        }
+        b /= c;
+        alert('trung bình cộng các số lẻ ở vị trí chẵn : ' + b);
+    </script>
+</body>
+</html>

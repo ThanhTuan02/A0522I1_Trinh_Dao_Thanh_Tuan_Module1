@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="create()">Thêm mới sản phẩm</button>
+<p id="display"></p>
+    <script>
+        class Sach{
+            constructor(ten_sach,nam_san_xuat,so_quyen) {
+                this.ten_sach = ten_sach;
+                this.nam_san_xuat = nam_san_xuat;
+                this.so_quyen = so_quyen;
+            }
+            getten_sach () {
+                return this.ten_sach;
+            }
+            getnam_san_xuat() {
+                return this.nam_san_xuat;
+            }
+            getso_quyen() {
+                return this.so_quyen;
+            }
+            setten_sach (ten_sach_moi) {
+                this.ten_sach = ten_sach_moi;
+            }
+            setnam_san_xuat (nam_san_xuat_moi) {
+                this.nam_san_xuat = nam_san_xuat_moi;
+            }
+            setso_quyen (so_quyen_moi) {
+                this.so_quyen = so_quyen_moi;
+            }
+        }
+        let sach1 = new Sach("Toán",2000,3);
+        let sach2 = new Sach("văn",1998,4);
+        let sach3 = new Sach("Tiếng Anh",1999,5);
+        let array = [sach1,sach2,sach3];
+
+        function display(array) {
+            let str = "<table border=\"1px\">\n" +
+                "  <tr>\n" +
+                "      <th>Tên sách</th>\n" +
+                "      <th>Năm xuất bản</th>\n" +
+                "      <th>số quyển</th>\n" +
+
+                "  </tr>";
+            for (let i = 0; i < array.length ; i++) {
+                str += "<tr>" +
+                    "<td>"+ array[i].getten_sach()+"</td>"+
+                    "<td>"+ array[i].getnam_san_xuat()+"</td>"+
+                    "<td>"+ array[i].getso_quyen()+"</td>"+
+                    "<td>"+
+                    "<button onclick='edit("+i+")'>Sửa</button>"+
+                    "<button onclick='remove("+i+")'>Xóa</button>"+
+                    "</td>"+
+                    "</tr>"
+            }
+            str += "</table>";
+            document.getElementById("display").innerHTML = str;
+        }
+        display(array);
+        display(array);
+        function create() {
+            let ten_sach_moi = prompt("Nhập tên sách");
+            let nam_xuat_ban = prompt("Nhập năm sản xuất");
+            let so_quyen = prompt("Nhập số quyển sách");
+            let Sachmoi = new Sach(ten_sach_moi,nam_xuat_ban,so_quyen);
+            array.push(Sachmoi);
+            alert("Thêm mới thành công");
+            display(array);
+        }
+
+        function edit(value) {
+            let ten_sach_moi = prompt("Nhập tên sách");
+            let nam_xuat_ban = prompt("Nhập năm sản xuất");
+            let so_quyen = prompt("Nhập số quyển sách");
+            let Sachmoi = new Sach(ten_sach_moi,nam_xuat_ban,so_quyen);
+            array[value]= Sachmoi;
+            alert("Sửa thành công");
+            display(array);
+        }
+
+        function remove(value) {
+            let abc = confirm("Bạn có muốn xóa không");
+            if(abc){
+                array.splice(value,1);
+                alert("xóa thành công");
+            }
+            display(array);
+        }
+    </script>
+</body>
+</html>

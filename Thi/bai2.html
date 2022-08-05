@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      function year () {
+         let day = +prompt("Nhập ngày");
+          let month = +prompt("Nhập tháng");
+          let years = +prompt("Nhập năm");
+         if (day < 32 && month < 13) {
+            alert(true) ;
+         } else {
+             alert("Yêu cầu người dùng nhập đúng định dangk dd/MM/yyyy")
+         }
+
+          if (years % 4 == 0) {
+              if ( years % 100 == 0) {
+                  if (years % 400 == 0) {
+                      alert("năm nhuận")
+                  } else {
+                      alert("năm không nhuận")
+                  }
+              } else {
+                  alert("năm nhuận ")
+              }
+          } else {
+              alert("năm không nhuận")
+          }
+      }
+      year()
+    </script>
+</body>
+</html>

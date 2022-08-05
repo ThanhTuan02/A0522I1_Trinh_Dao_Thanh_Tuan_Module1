@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+      let n = +prompt("nhập độ dài của mảng");
+      let result = 0;
+      let a = [];
+      let b = [];
+      for (let i = 0; i < n;i++) {
+          a.push(+prompt("nhập số nguyên"))
+      }
+      for ( let i = 0; i < a.length;i++) {
+          result += a[i];
+          b[i] = result;
+      }
+      alert(a + "\n" + b);
+  </script>
+</body>
+</html>

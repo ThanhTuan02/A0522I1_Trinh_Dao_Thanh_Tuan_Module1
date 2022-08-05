@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+      let number1 = +(prompt('Nhập số thứ 1'));
+      let number2 = +(prompt('Nhập số thứ 2'));
+      function number(x) {
+          let a = 0;
+          for (let i = 1; i < x; i++) {
+              if (x % i === 0) {
+                  a += i;
+              }
+          }
+          return a;
+      }
+
+      if (number1 === number(number2) && number2 === number(number1)) {
+          alert('true');
+      } else {
+          alert('false');
+      }
+  </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+      let numerators = [];
+      let denominators = [];
+      let maxFraction = [];
+      let size = +prompt("nhập độ dài mảng của các phân số");
+      for (let i = 0; i< size;i++) {
+          numerators.push(+prompt("nhập tử số"));
+          denominators.push(+prompt("nhập mẫu số"));
+      }
+       function maxFraciton (numerators,denominators) {
+            let max_vitri = 0;
+            for (let i = 0; i < numerators.length;i++) {
+                if (numerators[max_vitri] * denominators[i] < numerators[i]*denominators[max_vitri]) {
+                    max_vitri = i;
+                }
+            }
+       }
+  </script>
+</body>
+</html>

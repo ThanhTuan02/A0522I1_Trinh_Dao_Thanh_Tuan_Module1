@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = [];
+        let b = [];
+        let result = [];
+        let sizeA = +prompt("nhập độ dài mảng a");
+        for (let i = 0; i < sizeA;i++) {
+            a.push(+prompt("nhập số nguyên a"));
+        }
+        let sizeB = +prompt("nhập độ dài mảng b");
+        for (let i = 0; i < sizeB;i++) {
+            b.push(+prompt("nhập số nguyên b"));
+        }
+        for (let i = 0;i < sizeB;i++) {
+            if(a.indexOf(b[i]) === -1 && result.indexOf(b[i] === -1)) {
+                result.push(b[i]);
+            }
+        }
+        result.sort(function (a,b) {
+            return a - b;
+        });
+        alert("những phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A là: " + result);
+    </script>
+</body>
+</html>
